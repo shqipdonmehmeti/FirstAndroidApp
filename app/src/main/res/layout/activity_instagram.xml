@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".InstagramActivity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:textSize="30sp"
+        android:text="Instagram"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        />
+
+    <EditText
+        android:id="@+id/etInstagramUsername"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Phone Number , Username or Email"
+        />
+
+    <EditText
+        android:id="@+id/etInstagramPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        />
+
+    <TextView
+        android:id="@+id/tvInstagramForgetPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forget password?"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/purple_200"
+        android:textAlignment="textEnd"
+        />
+
+    <Button
+        android:id="@+id/btnInstagramLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_margin="20dp"
+        android:text="Login"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+
+        <ImageView
+            android:id="@+id/ivFacebookLogo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_marginLeft="20dp"
+            />
+
+        <TextView
+            android:id="@+id/btnInstagramContinueAs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Continue as Filan Fisteku ?"
+            android:textColor="@color/teal_700"
+            android:textSize="20sp"
+            />
+    </LinearLayout>
+    
+
+
+
+
+</LinearLayout>
