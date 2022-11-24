@@ -14,14 +14,22 @@ class InstagramActivity : AppCompatActivity() {
         setContentView(R.layout.activity_instagram)
         val tvHeader : TextView = findViewById(R.id.tvHeader)
         val etUsername : EditText = findViewById(R.id.etInstagramUsername)
+        val etPassword : EditText = findViewById(R.id.etInstagramPassword)
         val btnLogin : Button = findViewById(R.id.btnInstagramLogin)
+        val tvContinueAs : TextView = findViewById(R.id.tvInstagramContinueAs)
+
 
 
 
 
         btnLogin.setOnClickListener {
-            val inputValue = etUsername.text.toString()
-            Log.d("InstagramActivity", "inputValue for edit text $inputValue: ")
+            val inputValueForUsername = etUsername.text.toString()
+            val inputValueForPassword = etPassword.text.toString()
+            Log.d("InstagramActivity", "inputValue for Username :  $inputValueForUsername")
+            Log.d("InstagramActivity", "inputValue for Password :  $inputValueForPassword")
+            tvContinueAs.text = "Continue as $inputValueForUsername"
+            tvContinueAs.setTextColor(Color.BLUE)
+            btnLogin.setBackgroundColor(Color.BLACK)
         }
 
 
