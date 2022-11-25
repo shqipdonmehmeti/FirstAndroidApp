@@ -13,24 +13,29 @@
         android:theme="@style/Theme.FirstAndroidApp"
         tools:targetApi="31">
         <activity
-            android:name=".InstagramActivity"
+            android:name=".MainActivity"
             android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"></activity>
-        <activity
-            android:name=".CalculatorActivity"
-            android:exported="true"></activity>
+            android:name=".InstagramActivity"
+            android:exported="false"></activity>
         <activity
             android:name=".CostOfServiceActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CalculatorActivity"
+            android:exported="true" />
+        <activity
+            android:name=".InstagramAcitivtyWithConstraints"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 
