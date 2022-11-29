@@ -13,6 +13,20 @@
         android:theme="@style/Theme.FirstAndroidApp"
         tools:targetApi="31">
         <activity
+            android:name=".SimpleListViewActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".InstagramAcitivtyWithConstraints"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".MainActivity"
             android:exported="false">
             <meta-data
@@ -21,7 +35,7 @@
         </activity>
         <activity
             android:name=".InstagramActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
         <activity
             android:name=".CostOfServiceActivity"
             android:exported="true" />
@@ -29,7 +43,7 @@
             android:name=".CalculatorActivity"
             android:exported="true" />
         <activity
-            android:name=".InstagramAcitivtyWithConstraints"
+            android:name=".ComplexListView"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
