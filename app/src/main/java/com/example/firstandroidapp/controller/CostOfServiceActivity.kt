@@ -1,4 +1,4 @@
-package com.example.firstandroidapp
+package com.example.firstandroidapp.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.RadioGroup
 import android.widget.Switch
 import android.widget.TextView
+import com.example.firstandroidapp.R
 
 class CostOfServiceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

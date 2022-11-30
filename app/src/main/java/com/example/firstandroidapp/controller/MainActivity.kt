@@ -1,10 +1,8 @@
-package com.example.firstandroidapp
+package com.example.firstandroidapp.controller
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Gravity
-import android.widget.Toast
-import androidx.appcompat.widget.AppCompatButton
+import com.example.firstandroidapp.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

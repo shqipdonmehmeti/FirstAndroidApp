@@ -1,4 +1,4 @@
-package com.example.firstandroidapp
+package com.example.firstandroidapp.controller
 
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import com.example.firstandroidapp.R
 
 class InstagramActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

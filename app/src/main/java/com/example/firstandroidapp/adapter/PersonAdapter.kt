@@ -1,4 +1,4 @@
-package com.example.firstandroidapp
+package com.example.firstandroidapp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,6 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import com.example.firstandroidapp.R
+import com.example.firstandroidapp.model.Person
 
 class PersonAdapter(private val context: Context , private val personList : List<Person>) : BaseAdapter() {
 

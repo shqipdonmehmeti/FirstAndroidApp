@@ -13,37 +13,51 @@
         android:theme="@style/Theme.FirstAndroidApp"
         tools:targetApi="31">
         <activity
-            android:name=".SimpleListViewActivity"
+            android:name=".controller.screenorder.SecondScreenActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".InstagramAcitivtyWithConstraints"
+            android:name=".controller.ComplexListView"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".controller.SimpleListViewActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".InstagramActivity"
+            android:name=".controller.InstagramAcitivtyWithConstraints"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".controller.MainActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".controller.InstagramActivity"
             android:exported="false" />
         <activity
-            android:name=".CostOfServiceActivity"
+            android:name=".controller.CostOfServiceActivity"
             android:exported="true" />
         <activity
-            android:name=".CalculatorActivity"
+            android:name=".controller.CalculatorActivity"
             android:exported="true" />
         <activity
-            android:name=".ComplexListView"
+            android:name=".controller.screenorder.FirstScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
