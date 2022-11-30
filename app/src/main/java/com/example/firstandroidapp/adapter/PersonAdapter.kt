@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
+import android.widget.ImageView
 import android.widget.TextView
 import com.example.firstandroidapp.R
 import com.example.firstandroidapp.model.Person
@@ -24,9 +25,13 @@ class PersonAdapter(private val context: Context , private val personList : List
 
         val tvFirstName = rowView.findViewById<TextView>(R.id.tvFirstName)
         val tvLastName = rowView.findViewById<TextView>(R.id.tvLastName)
+        val tvAge = rowView.findViewById<TextView>(R.id.tvAge)
+        val ivProfilePicture = rowView.findViewById<ImageView>(R.id.ivProfilePicture)
 
         tvFirstName.text = personList[position].firstName
         tvLastName.text = personList[position].lastName
+        tvAge.text = personList[position].age.toString()
+        ivProfilePicture.setImageResource(personList[position].profilePicture)
 
         return rowView
 
