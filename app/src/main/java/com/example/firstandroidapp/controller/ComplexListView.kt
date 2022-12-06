@@ -11,23 +11,18 @@ import com.example.firstandroidapp.model.Person
 
 class ComplexListView : AppCompatActivity() {
     private lateinit var binding : ActivityComplexListViewBinding
+    private lateinit var personList : List<Person>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityComplexListViewBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        createPersonList()
+        createAdapterAndSetAdapterToListView()
+        onItemClickedListener()
+    }
 
-        val personList = listOf(
-            Person(R.drawable.cr7,"Cristiano","Ronaldo",37),
-            Person(R.drawable.messi,"Lionel","Messi",35),
-            Person(R.drawable.mbappe,"Kylian","Mbappe",23),
-            Person(R.drawable.neymar,"Neymar","Junior",28)
-        )
-
-        val personAdapter = PersonAdapter(this,personList)
-
-        binding.lvComplex.adapter = personAdapter
-
+    private fun onItemClickedListener() {
         binding.lvComplex.setOnItemClickListener { adapterView, view, position, l ->
             Toast.makeText(this,"Item with name : ${personList[position]} is clicked",Toast.LENGTH_LONG).show()
             val intent = Intent(this@ComplexListView,ComplexListViewActivityDetails::class.java)
@@ -36,13 +31,20 @@ class ComplexListView : AppCompatActivity() {
             intent.putExtra("last_name",personList[position].lastName)
             intent.putExtra("age",personList[position].age)
             startActivity(intent)
-
         }
+    }
 
+    private fun createAdapterAndSetAdapterToListView() {
+        val personAdapter = PersonAdapter(this,personList)
+        binding.lvComplex.adapter = personAdapter
+    }
 
-
-
-
-
+    private fun createPersonList() {
+         personList = listOf(
+            Person(R.drawable.cr7,"Cristiano","Ronaldo",37),
+            Person(R.drawable.messi,"Lionel","Messi",35),
+            Person(R.drawable.mbappe,"Kylian","Mbappe",23),
+            Person(R.drawable.neymar,"Neymar","Junior",28)
+        )
     }
 }

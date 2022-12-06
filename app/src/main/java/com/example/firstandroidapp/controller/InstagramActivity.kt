@@ -1,28 +1,36 @@
 package com.example.firstandroidapp.controller
 
 import android.graphics.Color
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.example.firstandroidapp.R
 
 class InstagramActivity : AppCompatActivity() {
+    private lateinit var btnLogin: Button
+    private lateinit var tvHeader: TextView
+    private lateinit var etUsername: EditText
+    private lateinit var etPassword: EditText
+    private lateinit var tvContinueAs: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_instagram)
-        val tvHeader : TextView = findViewById(R.id.tvHeader)
-        val etUsername : EditText = findViewById(R.id.etInstagramUsername)
-        val etPassword : EditText = findViewById(R.id.etInstagramPassword)
-        val btnLogin : Button = findViewById(R.id.btnInstagramLogin)
-        val tvContinueAs : TextView = findViewById(R.id.tvInstagramContinueAs)
+        findViews()
+        onClickListener()
+    }
 
+    private fun findViews() {
+        tvHeader = findViewById(R.id.tvHeader)
+        etUsername = findViewById(R.id.etInstagramUsername)
+        etPassword = findViewById(R.id.etInstagramPassword)
+        btnLogin = findViewById(R.id.btnInstagramLogin)
+        tvContinueAs = findViewById(R.id.tvInstagramContinueAs)
+    }
 
-
-
-
+    private fun onClickListener() {
         btnLogin.setOnClickListener {
             val inputValueForUsername = etUsername.text.toString()
             val inputValueForPassword = etPassword.text.toString()
@@ -32,9 +40,7 @@ class InstagramActivity : AppCompatActivity() {
             tvContinueAs.setTextColor(Color.BLUE)
             btnLogin.setBackgroundColor(Color.BLACK)
         }
-
-
-//        tvHeader.setTextColor(Color.RED)
-//        etUsername.setText("Changable from code")
     }
+
+
 }

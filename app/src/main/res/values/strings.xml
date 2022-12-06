@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">FirstAndroidApp</string>
+    <string name="create_toast">Create Toast</string>
+    <string name="create_snackbar">Create Snackbar</string>
+    <string name="create_alert_dialog">Create Alert Dialog</string>
 </resources>

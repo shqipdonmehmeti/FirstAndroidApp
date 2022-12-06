@@ -9,6 +9,10 @@ class ComplexListViewActivityDetails : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_complex_list_view_details)
+        getDataFromIntent()
+    }
+
+    private fun getDataFromIntent() {
         val ivProfilePicture = intent.getIntExtra("profile_picture",0)
         val firstName = intent.getStringExtra("first_name")
         val lastName = intent.getStringExtra("last_name")
